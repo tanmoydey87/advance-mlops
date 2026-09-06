@@ -17,9 +17,13 @@ jobs:
 #        uses: actions/setup-python@v6 # uses the setup-python action to set up the python environment
 #        with:
 #          python-version: '3.13'
-
+      - name: List Installed  Python
+        run:
+#          python -m pip install --upgrade pip
+          pip list
 
       - name: Install dependencies
         run: 
-#          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip list
           python ml_example.py
