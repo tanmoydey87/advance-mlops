@@ -3,6 +3,7 @@ from sklearn import datasets
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
+import tslearn
 
 
 # Load the Iris dataset
@@ -27,4 +28,7 @@ accuracy = accuracy_score(y_test, y_pred)
 
 # Print the accuracy
 print ('Accuracy: ', accuracy*100)
+
+# print ts learn version
+print ('TS learn version: ', tslearn.__version__)
 
